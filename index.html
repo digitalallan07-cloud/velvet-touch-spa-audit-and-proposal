@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velvet Touch Spa — Marketing Audit & Growth Proposal</title>
+<style>
+  :root{
+    --ivory:#f7f2ea; --cream:#efe7da; --paper:#fffdf9;
+    --plum:#4a2436; --plum2:#5e2f45; --wine:#722b47;
+    --gold:#b8945a; --gold2:#caa469; --goldsoft:#f1e7d4;
+    --ink:#2a2230; --muted:#8a7f86; --line:#e4d8c6;
+    --good:#2f7d5b; --goodsoft:#e4f1e9; --bad:#b23b4e; --badsoft:#f8e7e9; --warn:#b9872f; --warnsoft:#f7edd6;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;scroll-behavior:smooth;}
+  body{margin:0;background:var(--ivory);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:Georgia,"Times New Roman",serif;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:.01em;color:var(--plum);}
+  p{margin:0 0 14px;}
+  strong{color:var(--plum2);font-weight:650;}
+  .eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+
+  /* HERO */
+  header.hero{background:
+      radial-gradient(120% 120% at 80% 0%, rgba(184,148,90,.18), transparent 55%),
+      linear-gradient(160deg,#3c1d2d 0%, #4a2436 45%, #5e2f45 100%);
+    color:#f6ecdd;padding:66px 0 54px;position:relative;overflow:hidden;}
+  header.hero .wrap{position:relative;z-index:2;}
+  header.hero .eyebrow{color:var(--gold2);}
+  header.hero h1{color:#fbf4e8;font-size:44px;line-height:1.1;margin:16px 0 10px;text-wrap:balance;}
+  header.hero .sub{color:#e6d6c2;font-size:17px;max-width:60ch;margin:0;}
+  .brandline{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);margin-top:26px;}
+  .hairline{width:70px;height:2px;background:var(--gold);margin:22px 0;}
+
+  section{padding:52px 0;border-bottom:1px solid var(--line);}
+  section:nth-child(even){background:var(--paper);}
+  h2{font-size:30px;margin:0 0 6px;}
+  .lead{color:var(--muted);font-size:15px;margin:0 0 26px;max-width:62ch;}
+
+  /* verdict */
+  .verdict{background:linear-gradient(160deg,#fffdf9,#f6efe3);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:4px;padding:24px 28px;margin:6px 0 10px;box-shadow:0 10px 30px rgba(74,36,54,.06);}
+  .verdict .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+  .verdict p{margin:8px 0 0;font-size:18px;color:var(--plum);line-height:1.6;}
+
+  /* stat tiles */
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 8px;}
+  .tile{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 18px;text-align:center;}
+  .tile .n{font-family:Georgia,serif;font-size:30px;color:var(--plum);line-height:1;}
+  .tile .n.good{color:var(--good);} .tile .n.bad{color:var(--bad);}
+  .tile .l{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:9px;font-weight:600;line-height:1.4;}
+
+  /* tables */
+  .twrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px;margin:18px 0;background:#fff;}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:620px;}
+  th,td{padding:12px 14px;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  th:first-child,td:first-child{text-align:left;white-space:normal;}
+  thead th{background:var(--plum);color:#f3e7d6;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;font-family:-apple-system,sans-serif;}
+  tbody tr{border-top:1px solid var(--line);}
+  tbody tr.total td{background:var(--goldsoft);font-weight:700;color:var(--plum);}
+  tbody tr.bad td{background:var(--badsoft);}
+  .roas-good{color:var(--good);font-weight:700;} .roas-bad{color:var(--bad);font-weight:700;} .roas-mid{color:var(--warn);font-weight:700;}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:16px 0;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px 24px;}
+  .card h3{font-size:19px;margin:0 0 10px;}
+  .card.win{border-top:3px solid var(--good);}
+  .card.bad{border-top:3px solid var(--bad);}
+  ul.clean{list-style:none;padding:0;margin:10px 0;}
+  ul.clean li{padding:7px 0 7px 26px;position:relative;border-bottom:1px solid #f0e8da;}
+  ul.clean li:last-child{border-bottom:0;}
+  ul.clean li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:8px;border-radius:50%;background:var(--gold);}
+  ul.clean li.x::before{background:var(--bad);} ul.clean li.ok::before{background:var(--good);}
+
+  .scorecard{display:grid;grid-template-columns:1fr;gap:10px;margin:16px 0;}
+  .score{display:grid;grid-template-columns:150px 1fr 70px;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 20px;}
+  .score .ch{font-weight:650;color:var(--plum);}
+  .score .desc{font-size:14px;color:var(--muted);}
+  .grade{font-family:Georgia,serif;font-size:26px;text-align:center;font-weight:700;}
+  .g-a{color:var(--good);} .g-b{color:#6f8f3e;} .g-c{color:var(--warn);} .g-f{color:var(--bad);}
+
+  ol.steps{list-style:none;counter-reset:s;padding:0;margin:18px 0;}
+  ol.steps li{counter-increment:s;position:relative;padding:18px 22px 18px 72px;background:#fff;border:1px solid var(--line);border-radius:6px;margin-bottom:12px;}
+  ol.steps li::before{content:counter(s);position:absolute;left:20px;top:18px;width:34px;height:34px;border-radius:50%;background:var(--plum);color:var(--gold2);font-family:Georgia,serif;font-size:17px;display:flex;align-items:center;justify-content:center;}
+  ol.steps li b{color:var(--plum);}
+
+  /* proposal pricing */
+  .pkg{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0;}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px;box-shadow:0 10px 30px rgba(74,36,54,.05);}
+  .plan.feature{background:linear-gradient(160deg,#4a2436,#5e2f45);color:#f3e7d6;border:1px solid var(--plum);}
+  .plan.feature h3,.plan.feature .price{color:#fbf4e8;}
+  .plan .ptype{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+  .plan.feature .ptype{color:var(--gold2);}
+  .plan .price{font-family:Georgia,serif;font-size:34px;color:var(--plum);margin:8px 0 2px;}
+  .plan .per{font-size:13px;color:var(--muted);}
+  .plan.feature .per{color:#d8c3ad;}
+  .plan ul{list-style:none;padding:0;margin:16px 0 0;font-size:14.5px;}
+  .plan ul li{padding:7px 0 7px 24px;position:relative;border-top:1px solid rgba(0,0,0,.06);}
+  .plan.feature ul li{border-top:1px solid rgba(255,255,255,.12);}
+  .plan ul li::before{content:"✦";position:absolute;left:0;color:var(--gold);}
+
+  .cta{background:linear-gradient(160deg,#3c1d2d,#5e2f45);color:#f6ecdd;text-align:center;padding:60px 0;border:0;}
+  .cta h2{color:#fbf4e8;}
+  .cta p{color:#e6d6c2;max-width:56ch;margin:0 auto 10px;}
+  .btn{display:inline-block;background:var(--gold);color:#3c1d2d;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:13px;padding:14px 32px;border-radius:40px;text-decoration:none;margin-top:16px;}
+
+  footer{background:#2f1624;color:#c9b7a6;font-size:12.5px;text-align:center;padding:26px 0;}
+  footer a{color:var(--gold2);text-decoration:none;}
+  .note{font-size:12.5px;color:var(--muted);font-style:italic;}
+  @media(max-width:760px){
+    header.hero h1{font-size:32px;} .tiles{grid-template-columns:repeat(2,1fr);}
+    .cols,.pkg{grid-template-columns:1fr;} .score{grid-template-columns:1fr 60px;} .score .desc{grid-column:1/-1;}
+    h2{font-size:24px;}
+  }
+  @media print{section{break-inside:avoid;} header.hero,.cta{break-inside:avoid;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Marketing Audit &amp; Growth Proposal</div>
+    <h1>Velvet Touch Spa</h1>
+    <p class="sub">A 3-month performance review of your Google &amp; Meta advertising, website analytics and growth opportunities — with a clear strategy to turn spend into profit.</p>
+    <div class="brandline">European Expertise · Serene Spaces · Premium Wellness</div>
+    <div class="hairline"></div>
+    <div class="note" style="color:#d8c3ad;">Prepared by Hikmah AI Agency · Review period: July – September 2026 · Dubai (JBR · Marina · Jumeirah)</div>
+  </div>
+</header>
+
+<!-- EXEC SUMMARY -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">01 · Executive summary</div>
+    <h2>Google is funding your growth. Meta is quietly undoing it.</h2>
+    <div class="verdict">
+      <span class="k">The headline</span>
+      <p>Over three months you invested <strong>AED 128,900</strong> in ads and earned back <strong>AED 130,300</strong> — essentially break-even. But that average hides the real story: <strong>Google Ads returned a healthy profit (1.18× ROAS, +AED 17,100)</strong>, while <strong>Meta Ads lost almost everything it was given (0.56× ROAS, −AED 15,800)</strong> — erasing nearly all of Google's gains. Fix Meta and scale Google, and the same budget can become genuinely profitable.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="n good">1.18×</div><div class="l">Google Ads ROAS<br>(3-month)</div></div>
+      <div class="tile"><div class="n bad">0.56×</div><div class="l">Meta Ads ROAS<br>(3-month)</div></div>
+      <div class="tile"><div class="n">AED 128.9K</div><div class="l">Total ad spend<br>Jul–Sep</div></div>
+      <div class="tile"><div class="n bad">0.05×</div><div class="l">September Meta ROAS<br>(near-total loss)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">02 · The numbers</div>
+    <h2>Three months, side by side</h2>
+    <p class="lead">Return ÷ spend = ROAS. Anything below 1.0× means the channel paid out less than it cost.</p>
+    <div class="twrap"><table>
+      <thead><tr><th>Month</th><th>Google spend</th><th>Google return</th><th>Google ROAS</th><th>Meta spend</th><th>Meta return</th><th>Meta ROAS</th></tr></thead>
+      <tbody>
+        <tr><td>July 2026</td><td>29,800</td><td>34,700</td><td class="roas-good">1.16×</td><td>10,000</td><td>7,817</td><td class="roas-bad">0.78×</td></tr>
+        <tr><td>August 2026</td><td>23,900</td><td>25,572</td><td class="roas-mid">1.07×</td><td>11,561</td><td>11,566</td><td class="roas-mid">1.00×</td></tr>
+        <tr><td>September 2026</td><td>39,200</td><td>49,777</td><td class="roas-good">1.27×</td><td>15,443</td><td>850</td><td class="roas-bad">0.05×</td></tr>
+        <tr class="total"><td>Total</td><td>92,900</td><td>110,049</td><td>1.18×</td><td>36,004</td><td>20,233</td><td>0.56×</td></tr>
+      </tbody>
+    </table></div>
+    <p>Google improved every quarter and hit its <strong>best month in September (1.27×)</strong>. Meta went the opposite way — from a loss, to break-even, to a <strong>near-total loss in September</strong>: AED 15,443 spent returned just AED 850. That single month cost roughly <strong>AED 14,600</strong> — almost exactly Google's three-month profit.</p>
+  </div>
+</section>
+
+<!-- META DEEP DIVE -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">03 · What went wrong on Meta</div>
+    <h2>The September collapse wasn't bad luck — it was account structure</h2>
+    <p class="lead">We reviewed the full September Meta Ads export. The money didn't buy results because most of it never reached the right people.</p>
+    <div class="cols">
+      <div class="card bad">
+        <h3>What the account looks like</h3>
+        <ul class="clean">
+          <li class="x"><strong>Only 1 ad set was actually delivering.</strong> Of 13 ad sets, the rest were <em>not delivering, error, archived or inactive</em> — yet budget was fragmented across them.</li>
+          <li class="x"><strong>It's almost entirely retargeting.</strong> Nearly every ad set targets “Website Visitors.” That pool is tiny and finite — you can't grow a spa by only re-showing ads to the same few thousand people.</li>
+          <li class="x"><strong>Ad fatigue.</strong> Frequency hit <strong>7.8–8.4×</strong> on some sets — the same people saw the same ad up to 8 times. Response collapses.</li>
+          <li class="x"><strong>Duplicate “Copy” ad sets</strong> splitting budget so none ever completes Meta's learning phase.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>The one bright spot — and the real issue</h3>
+        <p>The single active ad set generated <strong>2,621 WhatsApp conversations for AED 8,085</strong> (~AED 3 each) — genuinely cheap leads.</p>
+        <p>So the problem isn't lead <em>cost</em>; it's that <strong>those conversations aren't turning into booked, paid appointments</strong> (hence AED 850 return). Meta is producing chat volume that doesn't convert — a creative, offer, and follow-up problem, not a reach problem.</p>
+        <p class="note">Bottom line: Meta needs a rebuild — fresh prospecting campaigns, new creative, consolidated budget, and a booking-focused offer — not more spend on the current setup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE WINS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">04 · What's working on Google</div>
+    <h2>Google is doing the heavy lifting — let's pour fuel on it</h2>
+    <p class="lead">September: AED 39,175 spent · 21,118 clicks · 4.05% CTR · AED 1.86 avg CPC · 98% mobile.</p>
+    <div class="cols">
+      <div class="card win">
+        <h3>Your highest-intent, best-converting pockets</h3>
+        <ul class="clean">
+          <li class="ok"><strong>Branded search wins big:</strong> “velvet touch spa” / “velvet spa dubai” convert at <strong>7%+</strong> with 29–35% CTR — people searching your name are ready to book.</li>
+          <li class="ok"><strong>JBR location intent converts at 6.3%</strong> — your home turf is gold.</li>
+          <li class="ok"><strong>“Near me” demand is huge:</strong> “spa near me” (595 clicks) &amp; “massage near me” (518) are your top traffic drivers.</li>
+          <li class="ok"><strong>Arabic search performs best of all:</strong> “مساج في دبي” 17.7% CTR, “مساج دبي” 14% — matching your Arabic-speaking audience.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Where Google budget is leaking</h3>
+        <ul class="clean">
+          <li class="x"><strong>Performance Max</strong> ate AED 6,089 for 15,893 clicks at AED 0.38 — suspiciously cheap, 0% top-of-page: likely low-quality display/network traffic, not booking-ready searchers. Needs audit &amp; exclusions.</li>
+          <li class="x"><strong>No booking/revenue tracking in GA4</strong> — “conversions” are WhatsApp clicks (1,949 in Sep), not confirmed paid bookings. You're optimising to clicks, not revenue.</li>
+          <li class="x"><strong>Budget is spread across Nearby + Dubai-Wide + PMax</strong> — the top-converting branded/JBR/Arabic terms deserve a bigger, dedicated share.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">05 · Audience &amp; demand</div>
+    <h2>Who's buying — and what they want</h2>
+    <div class="tiles">
+      <div class="tile"><div class="n">98%</div><div class="l">of traffic is mobile</div></div>
+      <div class="tile"><div class="n">25–44</div><div class="l">core converting age band</div></div>
+      <div class="tile"><div class="n">Aromatherapy</div><div class="l">your best-selling service</div></div>
+      <div class="tile"><div class="n">2,104</div><div class="l">YouTube referral sessions (Sep) — untapped</div></div>
+    </div>
+    <p style="margin-top:22px">Your customers are <strong>23+, predominantly Indian, Pakistani &amp; Arabic, and mostly male</strong> — and the data agrees: Arabic search terms post your highest CTRs, mobile is near-total, and the 25–44 band drives conversions. Three clear implications: <strong>(1) go harder on Arabic ad copy &amp; a dedicated Arabic landing experience</strong>, <strong>(2) make aromatherapy the hero offer</strong> in ads and remarketing, and <strong>(3) everything must be mobile-first and WhatsApp-instant.</strong> The <strong>2,100 monthly YouTube referrals</strong> hint at a content/short-video opportunity you're not yet monetising.</p>
+  </div>
+</section>
+
+<!-- SCORECARD -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">06 · Audit scorecard</div>
+    <h2>Channel by channel</h2>
+    <div class="scorecard">
+      <div class="score"><div class="ch">Google Search</div><div class="desc">Profitable &amp; improving; strong intent &amp; Arabic performance. Scale it.</div><div class="grade g-a">A-</div></div>
+      <div class="score"><div class="ch">Google PMax</div><div class="desc">Cheap clicks but likely low-quality placements; no clear return. Audit &amp; refine.</div><div class="grade g-c">C</div></div>
+      <div class="score"><div class="ch">Meta Ads</div><div class="desc">Broken structure, retargeting-only, ad fatigue, near-zero return in Sep. Rebuild.</div><div class="grade g-f">F</div></div>
+      <div class="score"><div class="ch">Conversion Tracking</div><div class="desc">Measuring WhatsApp clicks, not booked revenue — can't optimise ROAS blind.</div><div class="grade g-f">D</div></div>
+      <div class="score"><div class="ch">Website &amp; Mobile UX</div><div class="desc">Clean brand, mobile-first; booking is WhatsApp-led. Add revenue tracking + CRO.</div><div class="grade g-b">B</div></div>
+      <div class="score"><div class="ch">Organic / Social (Instagram, YouTube)</div><div class="desc">Real audience &amp; YouTube referral traffic, but under-leveraged for bookings.</div><div class="grade g-c">C+</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">07 · The strategy</div>
+    <h2>What we'll do about it</h2>
+    <ol class="steps">
+      <li><b>Stop the Meta bleed, then rebuild it.</b> Pause the broken retargeting sprawl immediately. Rebuild with 1–2 clean prospecting campaigns targeting new nearby clients (JBR/Marina/Jumeirah), fresh aromatherapy-led creative, consolidated budget, and a booking offer — not just “start a chat.”</li>
+      <li><b>Reallocate &amp; scale Google.</b> Shift budget toward the proven winners — branded, JBR, “near me” and Arabic search — and give PMax a proper audit (exclusions, asset refresh) or cap it until it earns.</li>
+      <li><b>Install real revenue tracking.</b> Set up proper booking/lead-value tracking (GA4 + WhatsApp + offline booking match) so every dirham is optimised to <em>actual bookings</em>, not just clicks. This single fix changes how every future campaign is judged.</li>
+      <li><b>Double down on Arabic &amp; aromatherapy.</b> Dedicated Arabic ad copy + landing section, and aromatherapy as the hero offer across ads, remarketing and social — it's what sells.</li>
+      <li><b>Turn social &amp; YouTube into bookings.</b> A consistent Instagram (@spavelvetjbr) + short-video content engine that feeds the funnel and captures the 2,000+ monthly YouTube visitors you already attract.</li>
+      <li><b>Report on what matters.</b> Monthly ROAS-by-channel and cost-per-booking reporting (like this), so decisions are made on profit, not vanity metrics.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- PROPOSAL -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">08 · The proposal</div>
+    <h2>How we'll work together</h2>
+    <p class="lead">A one-time rebuild to fix the foundations, then a monthly partnership to manage, optimise and grow. Ad spend is separate and stays in your control.</p>
+    <div class="pkg">
+      <div class="plan">
+        <div class="ptype">One-time · foundations</div>
+        <div class="price">AED 3,000</div>
+        <div class="per">one-off setup &amp; rebuild</div>
+        <ul>
+          <li>Full Meta Ads account rebuild (new structure &amp; campaigns)</li>
+          <li>Conversion &amp; booking-value tracking setup (GA4 + WhatsApp + offline)</li>
+          <li>Google PMax audit, exclusions &amp; restructure</li>
+          <li>Fresh aromatherapy-led ad creative (set)</li>
+          <li>Arabic ad copy &amp; landing recommendations</li>
+        </ul>
+      </div>
+      <div class="plan feature">
+        <div class="ptype">Monthly · growth partnership</div>
+        <div class="price">AED 5,000<span style="font-size:16px;"> / mo</span></div>
+        <div class="per">management &amp; optimisation (excl. ad spend)</div>
+        <ul>
+          <li>End-to-end Google &amp; Meta management + daily optimisation</li>
+          <li>Instagram (@spavelvetjbr) content &amp; short-video engine</li>
+          <li>Ongoing creative &amp; offer testing (aromatherapy-led)</li>
+          <li>Arabic + English campaign management</li>
+          <li>Monthly ROAS &amp; cost-per-booking report</li>
+          <li>WhatsApp lead-to-booking follow-up guidance</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Pricing is a recommended starting package and can be tailored to scope. Ad budget is paid directly by Velvet Touch Spa and remains fully transparent.</p>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">09 · The opportunity</div>
+    <h2>What “fixed” looks like</h2>
+    <p class="lead">Conservative, based on your own three-month data.</p>
+    <div class="twrap"><table>
+      <thead><tr><th>Scenario</th><th>Monthly ad spend</th><th>Blended ROAS</th><th>Monthly return</th><th>Monthly profit*</th></tr></thead>
+      <tbody>
+        <tr><td>Today (Sep, as-is)</td><td>~54,600</td><td>0.93×</td><td>~50,600</td><td class="roas-bad">≈ −4,000</td></tr>
+        <tr><td>Meta fixed to break-even + Google scaled</td><td>~54,600</td><td>1.25×</td><td>~68,000</td><td class="roas-good">≈ +13,400</td></tr>
+        <tr class="total"><td>Meta to 1.2× + Google held at 1.27×</td><td>~54,600</td><td>1.24–1.30×</td><td>~68–71,000</td><td>+13–16K / mo</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">*Profit = return − ad spend (before management fee). Illustrative, based on July–September actuals; not a guarantee. The single biggest lever is ending Meta's near-zero-return spend and redirecting it to proven Google demand — while installing tracking so every future dirham is optimised to real bookings.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold2);">Next step</div>
+    <h2>Let's turn break-even into profit.</h2>
+    <p>We've shown you exactly where the money is going and where it should go. Approve the foundations rebuild and we'll begin within 48 hours — starting by stopping the Meta bleed and installing proper booking tracking.</p>
+    <a class="btn" href="https://velvettouchspa.ae/">Approve &amp; begin</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Velvet Touch Spa — Marketing Audit &amp; Growth Proposal · July–September 2026<br>
+    Prepared by <strong style="color:#e9d6bf;">Hikmah AI Agency</strong> · <a href="https://velvettouchspa.ae/">velvettouchspa.ae</a> · <a href="https://massagejbr.com/">massagejbr.com</a> · <a href="https://www.instagram.com/spavelvetjbr">@spavelvetjbr</a><br>
+    <span style="color:#8a7566;">Confidential — prepared exclusively for Velvet Touch Spa.</span>
+  </div>
+</footer>
+
+</body>
+</html>
